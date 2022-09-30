@@ -1,0 +1,88 @@
+=>>  Computer architecture
+mereferensikan atribut-atribut sistem yang berhubungan dengan seorang programmer--yaitu yang memiliki dampak langsung dengan eksekusi logika pada program.
+=>>  Computer organization
+mereferensikan ke unit operasi komputer beserta interkoneksinya.
+
+note: banyak sekali komputer dengan organization yg berbeda-beda, namun menggunakan architecture yg sama
+contoh atribut computer architecture:
+	>> set instruksi, bit u/ representasi berbagai tipe data, mekanisme I/O 
+
+STRUCTURE n FUNCTION
+intro: hierarchical system
+computer adalah perangkat kompleks, terdiri dari jutaan komponen elektronik dasar.
+maka untuk mendeskripsikannya, digunakan
+"hierarchical system": set dari subsistem yang berkaitan satu sama lain, dimana hierarchical structure dapat dipecah sampai tingkat terendah
+dengan begitu, desainer cukup menangani tingkat tertentu satu-per-satu.
+
+hal terpenting pada setiap tingkat hierarchical system adalah structure & function nya
+=>> structure: cara di mana komponen komputer tsb saling terkait
+=>> function: operasi yg dilakukan setiap komponen individu sebagai bagian dari struktur
+
+4 main function:
+> data processing (CPU & GPU)
+> data storage (short & long term)
+> data movement (I/O & communications)
+> control (memanajemen komponen dengan instruksi)
+
+4 main structure:
+> CPU (control & processing)
+> main memory (menyimpan data)
+> I/O (memindahkan data antara lingkungan internal-external komputer)
+> system interconnection (mekanisme yang memungkinkan komunikasi antara CPU, main memory, dan I/O)
+
+
+CPU
+=>> control unit: mengontrol operasi dari CPU
+=>> Arithmetic and Logic Unit (ALU): data processing
+=>> Registers: storage internal dalam CPU
+=>> CPU interconnection: mekanisme komunikasi antar control unit, ALU, & registers
+
+Multicore Computer Structure:
+"Multicore Computer" adalah komputer yang memiliki banyak processor, yang disatukan menjadi satu chip.
+setiap "processing unit" (terdiri dari control unit, ALU, registers, cache?) disebut "core"
+	dictionary
+CPU: bagian komputer yang menerima dan mengeksekusi instruksi (sehingga processor juga termasuk CPU)
+Core: satu processing unit dalam processor chip. satu core memiliki fungsi yg ekivalen dengan CPU
+Processor: chip yang terdiri dari satu atau lebih core.
+
+++ multiple layers of memory
+dalam eksekusi program, processor membutuhkan memory. agar akses ke memory cepat, ada memory yang dimasukkan ke dalam processor dinamakan "cache memory".
+"cache memory" terdiri dari berbagai level dengan level 1 (L1) adalah memory yg paling dekat dengan core dan tercepat, semakin tinggi levelnya (L2, L3, dsb) semakin jauh dan lambat.
+
+# gambar struktur processor
+
+++: ALU (Arithmetic Logic Unit)
+Aritmatika: + - x /
+Logika: AND OR NOT NAND NOR XOR
+
+> gerbang logika
+> bitwise operation
+
+setiap bit dimasukkan ke gerbang logika dan outputnya disatukan, kumpulan gerbang ini disimplifikasi menjadi satu struktur.
+
+maka dibuat struktur yg terdiri dari banyak kumpulan gerbang dan operasi, yang dikontrol operasi mana yang akan dioutputkan.
+
+ini adalah ALU. dimana input dimasukkan, selector bit memilih operasi yg akan dilakukan, dan output dikeluarkan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

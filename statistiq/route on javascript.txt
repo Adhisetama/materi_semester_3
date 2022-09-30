@@ -1,0 +1,18 @@
+
+
+
+
+"/add" -> membuat data medicine baru did database
+	cara: gunakan POST dan buat body request sebagai JSON dengan field 'name', 'manufacturer', 'description' , 'stock' harus terisi.
+
+"/" -> mengambil data semua medicine di database
+	cara: gunakan GET
+
+"/:id"
+GET -> mengambil data satu medicine dengan id = req.params.id
+PUT -> mengupdate data satu medicine, dalam body request berikan data JSON untuk field medicine yg akan di update
+DELETE -> mendelete data medicine dengan id tsb
+
+"/:id/log"
+GET -> ambil semua transaction log dari data
+PUT -> tambah satu data transaction log, dalam body request berikan data JSON dengan field 'stock' dan berisi data integer. field 'description' juga dapat diberikan (tidak wajib)

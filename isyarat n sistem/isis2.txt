@@ -1,0 +1,84 @@
+sumber: Signals and Systems 2nd Ed. by Oppenheim
+
+
+=> Periodic signals (15)
+
+x(t) periodik dengan periode T jika x(t) = x(t+T) untuk semua t
+x[n] periodik dengan periode N jika x[n] = x[n+N] untuk semua n
+
+=> Sinyal ganjil dan genap
+
+sinyal dikatakan:
+    -  genap apabila: x(-t) = x(t) atau x[-n] = x[-n] 	contoh: x(t)=cos(t)
+    - ganjil apabila: x(-t) = -x(t) atau x[-n] = -x[n] 	contoh: x(t)=sin(t)
+teorema: sinyal apapun dapat dipecah menjadi jumlahan sepasang sinyal ganjil dan genap
+x(t) = Ev{x(t)} + Od{x(t)}
+dimana
+Ev{x(t)} = 1/2[x(t)+x(-t)] adalah bagian genap dari x(t)
+Od{x(t)} = 1/2[x(t)-x(-t)] adalah bagian ganjil dari x(t)
+
+=> Sinyal eksponen dan sinusoidal kompleks
+
+bentuk umum sinyal eksponensial 
+	x(t) = Ce^at C,a adalah complex numbers
+
+1. Real exponential signals
+	apabila C,aERe. maka x(t) adalah sinyal eksponensial real
+	apabila a>0, maka x(t) growing exponential
+	apabila a<0, maka x(t) decaying exponential
+	
+2. Periodic complex exponential and sinusoidal signals
+	a. periodic complex exponential
+	apabila a adalah imajiner, maka sinyal eksponen tsb periodik dengan bentuk
+	x(t) = e^jw0t1
+	dengan periode T = 2pi/|w0|
+	proof: x(t)=x(t+T) => e^jw0=e^jw0(t+T) => e^jw0T=1 => e^jw0T=e^j2pi => w0T=2pi => T=2pi/w0
+	
+	b. sinusoidal signal
+	x(t) = Acos(w0t+Phi)
+	
+	dimana Phi adalah radian, dan w0 adalah radian/sekon
+	untuk kedua sinyal,
+	w0=2pif0 dimana f0=frekuensi (Hz)
+	T0=1/f0 = 2pi/w0 (cocok dengan rumus T0 sinyal exp kompleks di atas)
+
+	Hubungan complex & sinusoidal yg worth noticing:
+	- e^jw0t=cosw0t + jsinw0t
+	- Asin(w0t+Phi) = AIm(e^j(w0t+Phi)) = A(1/2j)(e^j(w0t+Phi)-e^-j(w0t+Phi))
+	- Acos(w0t+Phi) = ARe(e^j(w0t+Phi)) = A(1/2)(e^j(w0t+Phi)+e^-j(w0t+Phi))
+	hal ini juga diturunkan dari sifat sin(-x)=-sin(x) dan cos(-x)=cos(x) dan e^(a+b)=(e^a)(e^b)
+
+3. General complex exponential signals (baca hal 20-21),
+	konsep: pada x(t) = Ce^at
+	ubah bentuk konstanta C menjadi C = |C|e^j(theta)
+	dan konstanta a menjadi a=r+jw0
+	sehingga persamaan menjadi
+	Ce^at = [|C|e^j(theta)][e^(r+jw0)t]
+	Ce^at = |C|(e^rt)(e^j(w0+(theta)))
+	Ce^at = |C|e^rt[cos(w0t+(theta))+jsin(w0t+(theta))]
+	dapat dilihat bahwa kurva tsb membentuk sinusoidal, namun amplitudonya mengikuti eksponensial |C|e^rt
+
+	sehingga...
+	apabila r>0, terbentuk growing sinusoidal
+	apabila r<0, terbentuk decaying sinusoidal	
+
+
+
+NOTE: ternyata yg dibawah ini gaada di ppt, therefore gausah dipelajari bodoamat :D
+=> Sinyal eksponen dan sinusoidal kompleks pt.2: Sinyal diskrit
+
+bentuk umum: x[n] = C(alfa)^n C,(alfa) adalah complex number
+	dimana alfa dapat diekspresikan sebagai e^(beta) sehingga
+		x[n] = Ce^(beta)n
+
+1. Real Exponential Signals (22)
+	jika alfa dan C adalah real, maka sifat2 x[n]:
+	apabila |alfa| > 1, maka x[n] grows exponentially
+	apabila 0 < |alfa| < 1, maka x[n] decays exponentially
+	apabila alfa positif, semua x[n] bertanda sama (+ atau -)
+	apabila alfa negatif, tanda dari x[n] bergantian (+ dan -)
+	[gambar 1.3 di halaman 23]
+
+2. Sinusoidal signals
+	
+

@@ -1,0 +1,33 @@
+signal: sinyal adalah variabel dependen atau fungsi dari satu atau lebih variabel independen
+f(x1,x2,...,xn) apabila x1...xn adalah independen variable,
+maka f adalah sebuah signal dari x1...xn
+
+maka, apapun yg konstan bukanlah sinyal, arus AC adalah sinyal, namun arus DC bukanlah sinyal
+
+i) single variable signal: hanya dependen ke 1 variabel ind.
+ii) multi variable signal: dependen ke > 1 variabel ind.
+
+system: "meaningful interconnection of physical devices and components is called as system"
+
+system, dengan dirinya sendiri, tdk dapat melakukan apa-apa.
+
+cth: water-pump-tank
+
+->signal(i/p)->[system]->signal(o/p)->
+
+dlm hal ini, input signal (listrik) diolah oleh sistem dan sistem mengoutputkan output signal (energi mekanik)
+apabila input signal -> f(x1, x2)
+maka output signal -> g(x1, x2) dependen pada variabel yg sama
+
+problems
+1. analysis problem
+i/p s  OK
+system OK
+o/p s  ??
+simpel dan hampir selalu memiliki solusi
+
+1. synthesis problem
+i/p s  OK
+system ??
+o/p s  OK
+kompleks dan terkadang tdk memiliki solusi

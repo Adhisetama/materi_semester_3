@@ -1,0 +1,113 @@
+statistics
+
+=> terminology
+
+point estimate:
+	point estimate parameter theta dari sebuah populasi adalah value thetahead dari statistik ThetaHead
+	note: parameter => karakteristik dari populasi (cth: mean, median, dll termasuk parameter)
+	      statistik => fungsi dari sebuah sampel (cth: sample mean, sample median, dll)
+			   note that statistik adalah random variable!
+	contoh: untuk mencari mean populasi myu, diambil sebuah sample dan dihitung sample mean berupa Xbar.
+		saat Xbar=xbar, maka xbar adalah point estimate dari populasi
+		^^ di contoh atas, 	parameter theta adalah myu;
+					statistik ThetaHead adalah Xbar;
+					point estimate thetahead adalah xbar
+
+	"populasi" --diambil-> "sample" --menghitung-> "point estimate" --u/ estimasi-> "parameter" --menggambarkan-> "populasi"
+
+
+estimator:	
+	statistik ThetaHead yang membentuk point estimate thetahead disebut "Estimator".
+	note: ingat lagi estimator adalah random variable yg merupakan fungsi dari sample
+ 	
+	estimator ThetaHead untuk parameter theta dikatakan "unbiased" jika
+		E[ThetaHead]=theta
+
+	estimator yang baik adalah yang "unbiased" dan memiliki variansi sigmaTH^2 sekecil mungkin.
+	* gambar 3 normal lonceng (268)
+
+interval estimation (hal 268):
+	ide: ketimbang menggunakan satu thetahead untuk mengestimasi theta, buat sebuah 
+	interval sehingga thetaheadL < theta < thetaheadU
+	dan mengasumsikan nilai theta berada dalam interval
+	dimana thetaheadL & thetaheadU diambil berdasar distribusi TH
+
+
+confidence interval (hal 269):
+	ide: pengambilan batas thL & thU bisa berbeda2, hence thL & thU adalah random variable
+		yg dibuat dari TH. dan memiliki probabilitas P(THL<theta<THU) adalah area dibawah
+		kurva distribusi TH.
+	apabila ditemukan THL=thL & THU=thU sehingga P(THL<theta<THU) = 1-alfa, maka:
+	-> interval thL<theta<thU memiliki (1-alfa)*100% convidence interval
+	-> 1-alfa disebut "confidence coefficient/degree of confidence"
+	-> thU & thL adalah upper & lower "confidence limit"
+
+=> estimating the mean pt.1 (sigma known) (hal 270)
+	note: ini adalah kasus oversimplified dgn single sample
+
+	re: distribusi sample mean adalah normal dgn myuXbar = myu dan sigmaXbar = sigma/sqrt(n).
+	sehingga estimator Xbar untuk myu adalah "unbiased", dan semakin besar ukuran sampel n
+	maka semakin baik estimator tsb.
+
+	- confidence interval
+	misal sebuah kurva normal dibuat interval sehingga:
+	* gambar 270
+
+	hubungan Xbar dan Z adalah [insert rumus]
+
+	maka didapat [insert 2 eq]
+
+	:. jika xbar: nilai sample mean; n: ukuran sampel; sigma^2: variansi populasi
+	maka (1-alfa)*100% confidence interval dari myu (mean populasi) adalah
+	[insert eq from akhir 270]
+	dengan z(alfa/2) adalah titik dimana kurva normal membatasi luas (alfa/2) *insert mini illust
+
+=> estimating the mean pt.2 (sigma unknown) (hal 274)
+	note: pada pt.1, dianggap sigma diketahui, jika tidak? gunakan t-distribution
+
+	re: apabila sebuah sampel dari populasi normal memiliki ukuran n, maka sample-meannya
+	berbentuk distribusi-t dengan n-1 degree of freedom
+
+	* gambar 275
+
+	hubungan Xbar dan T adalah T=Xbar-myu/S/sqrt(N)
+
+	maka didapat [insert 2 eq]
+	
+	:. jika populasi normal diambil sebuah random sample dan
+	n: ukuran sampel; S^2 sample variance;
+	maka (1-alfa)*100% confidence interval dari myu (mean populasi) adalah
+	[insert eq from 275]
+	dengan t(alfa/2) adalah titik dimana kurva distribusi-t dgn (n-1) degree of freedom
+	membatasi luas (alfa/2) *insert mini illust
+
+=> estimating the mean pt.3 (276)
+	note: bagaimana jika sigma tidak diketahui & populasi tidak berdistribusi normal??
+
+	Large-Sample Confidence Interval
+	jika sampel berukuran besar (n >= 30) maka std.dev dari sample (s) dapat digunakan
+	untuk menggantikan sigma.
+
+	sehingga rumus sama seperti pt.1, namun sigma diganti dgn s
+
+	thetaU & thetaL = xbar +- z(alfa/2)s/sqrt(n)
+
+note: kata bapaknya sih suruh belajar mandiri
+• Section 9.5: Standard Error of a Point Estimate (276-277)
+• Section 9.6: Prediction Intervals (277-278)
+• Section 9.7: Tolerance Limits (278-282)
+• Section 9.9: Paired Observations (291)
+^^ gtw bakal tak buat catetannya apa nggak
+
+
+
+
+
+
+
+
+
+
+
+
+

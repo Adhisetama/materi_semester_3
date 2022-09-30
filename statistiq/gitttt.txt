@@ -1,0 +1,67 @@
+
+
+
+how to add git
+
+
+from interface:
+
+- create repo
+- copy link ssh
+- go on ur folder
+- "git clone <link>"
+
+
+from local
+
+- create empty repo
+- copy link ssh
+- "git init"
+- "git remote add origin <link>
+# to check, "git remote -v"
+
+
+how to upload
+
+- "git add ."
+- "git commit -m "message""
+- "git push origin <branchname>
+
+
+branching
+# check branch, "git branch"
+
+- "git checkout <branchname>"
+# if add new branch "git checkout -b <branchname>"
+
+# merging locally
+- "git merge"
+# for more aman
+- "git merge <masterbranchname>"
+
+# merging with request
+- "git push -u origin <branchname>"
+- open github and make a pull request
+
+# delete ze branch
+- "git branch -d <branchname>"
+
+
+
+rollback on git
+
+pt1. cancelling git add
+- "git reset" or "git reset <filename>"
+
+pt2. cancelling git commid
+- "git reset HEAD~1" 
+	HEAD~1 maksudnya adalah urutan ke-1 sebelum commit terakhir (head)
+
+
+pt3. ...from specific commit
+- "git log" commit history, copy commit hash nya
+- "git reset <hash>"
+
+pt4. ...to fkin remove from specific commit
+
+- "git reset --hard <hash>"

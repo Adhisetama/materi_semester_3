@@ -1,0 +1,29 @@
+Open methods:
+ide&konsep:
+	bracketing methods mengandalkan 2 titik yang membentuk interval untuk mencari root dalam interval tsb.
+	open methods hanya mengandalkan titik random terbuka untuk memprediksi dimana letak root berada.
+
+1. simple fixed point iteration (146-150):
+ide&konsep:
+	definisi root adalah x ketika f(x)=0. maka asumsikan f(x)=0 dan modifikasi persamaan tersebut
+	menjadi x=g(x).
+	=> didapat metode simple fixed point iteration
+	1. dari f(x)=0, modifikasi menjadi x=g(x)
+	2. ambil satu titik x0
+	3. iterasikan dengan x(i+1)=g(xi)
+	4. iterasi berhenti ketika (epsilon)a < (epsilon)s dimana (epsilon)a = abs{ (x(i+1) -  xi) / x(i+1) }
+satu fungsi f(x)=0 dapat membuat berbagai macam x=g(x). ada g(x) yang konvergen menuju root dan tidak.
+teorema: apabila |g'(x)|<1 maka iterasi x(i+1)=g(xi) konvergen ke root.
+
+2. newton-raphson method mencari x(i+1) dengan cara menarik garis slope di f(xi)
+dan mencari perpotongannya dengan sumbu x
+
+secant method
+ide&konsep:
+	metode newton-raphson menggunakan derivatif, namun tidak semua fungsi mudah dihitung derivatifnya.
+	secant method menggunakan aproksimasi dan mencari garis secant diantara xi dan xi-1
+	alih-alih garis slope di xi untuk menentukan xi+1
+	*aproksimasi derivatif dengan secant
+	f'(x) ~= delta(y)/delta(x) ~= f(x(i-1))-f(xi)/x(i-1)-xi
+	substitusi f'(x) ke persamaan newton-raphson dan didapat:
+	[rumusny] 

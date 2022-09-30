@@ -1,0 +1,12 @@
+setup in html:
+	pull cdn react & react dom
+	pull jsx babel
+for index.js, add attr: type="text/babel"
+
+custom component harus diawali huruf kapital, jika tidak maka error
+
+cara merender element
+
+ReactDOM.render(a,b)
+dimana a adalah JSX yg ingin dirender
+dan b adalah elemen HTML yg akan meng-append a
